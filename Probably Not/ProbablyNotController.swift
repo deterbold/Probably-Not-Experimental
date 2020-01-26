@@ -62,7 +62,7 @@ class ProbablyNotController: UIViewController, UINavigationControllerDelegate, U
         //MARK: - LABELS
          //https://stackoverflow.com/questions/37893000/swift-infinite-fade-in-and-out-loop
         answerField = UITextView(frame: CGRect(x: 25, y: self.view.frame.midY - 50, width: self.view.frame.width - 50, height: 120))
-        answerField.font = .boldSystemFont(ofSize: 60)
+        answerField.font = UIFont(name: "Avenir-BlackOblique", size: 60)
         answerField.textColor = .black
         answerField.textAlignment = .center
         answerField.isEditable = false

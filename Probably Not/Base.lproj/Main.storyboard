@@ -14,69 +14,11 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ch-qz-E16">
-                                <rect key="frame" x="0.0" y="576" width="375" height="46"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16H-0l-DYp"/>
-                                    <barButtonItem title="Absolutely Not" id="QaK-jU-Lsi">
-                                        <connections>
-                                            <segue destination="huD-pX-p4i" kind="show" id="F45-XN-vOJ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OhO-bX-O0n"/>
-                                    <barButtonItem title="Game" id="D75-1M-vFw">
-                                        <connections>
-                                            <action selector="pressedGame:" destination="BYZ-38-t0r" id="01n-MZ-w7f"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jBg-kQ-AlS"/>
-                                    <barButtonItem title="Probably Not" id="bbt-WU-wqh">
-                                        <connections>
-                                            <segue destination="chV-et-J4s" kind="show" id="9Qx-hL-rga"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kWG-SH-MqL"/>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0F-WP-8mO">
-                                <rect key="frame" x="11" y="12" width="353" height="512"/>
-                                <string key="text">Learn to see the world through the lenses of Artificial Intelligence!
-
-Choose between:
-
-Absolutely Not: take a picture, or choose a picture from your library, and let the AI tell you what the thing in the picture is absolutely not.
-
-Probably Not: take a picture, or choose a picture from your library, and let the AI tell you what the thing in the picture is probably not.
-
-Or try the AI-powered treasure hunt game!
-  Inspired by the work of Kate Crawford and Trevor Paglen.</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="U0F-WP-8mO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Tl-LZ-18j"/>
-                            <constraint firstItem="U0F-WP-8mO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ft2-E6-Dbb"/>
-                            <constraint firstItem="U0F-WP-8mO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-55.5" id="Hah-fk-ezM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U0F-WP-8mO" secondAttribute="trailing" id="Kyz-4j-aOe"/>
-                            <constraint firstItem="6ch-qz-E16" firstAttribute="top" secondItem="U0F-WP-8mO" secondAttribute="bottom" constant="52" id="NYP-GV-3R0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U0F-WP-8mO" secondAttribute="trailing" id="e20-Zg-Msf"/>
-                            <constraint firstItem="U0F-WP-8mO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="iQN-7W-R96"/>
-                            <constraint firstItem="6ch-qz-E16" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iXg-Xt-HSN"/>
-                            <constraint firstItem="U0F-WP-8mO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="kFA-nm-bE2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6ch-qz-E16" secondAttribute="bottom" constant="25" id="lGl-ym-GYb"/>
-                            <constraint firstItem="U0F-WP-8mO" firstAttribute="centerX" secondItem="6ch-qz-E16" secondAttribute="centerX" id="yzr-GV-Yif"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qm7-WY-R4e"/>
                     <connections>
-                        <outlet property="presentationLabel" destination="U0F-WP-8mO" id="kzC-ZH-QQI"/>
                         <segue destination="s8Y-Xp-ogT" kind="show" identifier="toTutorial" id="YsL-c2-P7n"/>
                         <segue destination="Fnl-rV-Qph" kind="show" identifier="toGame" id="FyC-zF-uP1"/>
                     </connections>
@@ -309,7 +251,7 @@ Press NEXT</string>
             <objects>
                 <viewController id="huD-pX-p4i" customClass="AbsolutelyNotController" customModule="Probably_Not" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0s-5T-gYS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TvT-AB-EIc"/>
@@ -325,7 +267,7 @@ Press NEXT</string>
             <objects>
                 <viewController id="chV-et-J4s" customClass="ProbablyNotController" customModule="Probably_Not" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5rF-rK-AGL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fsh-YL-StA"/>
@@ -481,7 +423,7 @@ Press NEXT</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FyC-zF-uP1"/>
-        <segue reference="h4n-4w-sUe"/>
+        <segue reference="YsL-c2-P7n"/>
         <segue reference="pB9-oK-I3n"/>
     </inferredMetricsTieBreakers>
 </document>

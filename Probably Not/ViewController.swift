@@ -10,24 +10,51 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    
+    //MARK: - USER DEFAULTS
     let defaults = UserDefaults.standard
-
-    @IBOutlet weak var presentationLabel: UILabel!
+    
+    //MARK: - USER INTERFACE
+    var presentationLabel: UILabel!
+    var absolutely: UIBarButtonItem!
+    var game: UIBarButtonItem!
+    var probably: UIBarButtonItem!
+   
+    
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        //MARK: - NAVIGATION CONTROLLER
         self.navigationController?.navigationBar.isHidden = true
+        navigationController?.setToolbarHidden(false, animated: true)
+        navigationController?.toolbar.barTintColor = .systemBackground
+        absolutely = UIBarButtonItem(title: "ABSOLUTELY NOT", style: .plain, target: self, action: #selector(absolutelyNot))
+        game = UIBarButtonItem(title: "GAME", style: .plain, target: self, action: #selector(pressedGame))
+        probably = UIBarButtonItem(title: "PROBABLY NOT", style: .plain, target: self, action: #selector(probablyNot))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        toolbarItems = [spacer, spacer, absolutely, spacer, spacer, game, spacer, spacer, probably, spacer, spacer]
+
 
         // Do any additional setup after loading the view.
         print(UserDefaults.standard.bool(forKey: "didSee"))
 
+        //MARK: - UI ELEMENTS INIT
+        presentationLabel = UILabel(frame: CGRect(x: 10, y: 150, width: view.frame.width - 15, height: view.frame.height - 300))
+        presentationLabel.font = UIFont(name: "Avenir-BlackOblique", size: 60)
+        presentationLabel.text = "Learn to see the world through the lenses of Artificial Intelligence!\nChoose between:\n \n Absolutely Not: take a picture, or choose a picture from your library, and let the AI tell you what the thing in the picture is absolutely not.\n \nProbably Not: take a picture, or choose a picture from your library, and let the AI tell you what the thing in the picture is probably not.\n \n Or try the AI-powered treasure hunt game!\n \n \n Inspired by the work of Kate Crawford and Trevor Paglen."
+        presentationLabel.numberOfLines = 0
+        presentationLabel.adjustsFontSizeToFitWidth = true
+        presentationLabel.adjustsFontForContentSizeCategory = true
+        view.addSubview(presentationLabel)
+        
         let tripleTap = UITapGestureRecognizer(target: self, action: #selector(changeFont))
         tripleTap.numberOfTapsRequired = 3
         view.addGestureRecognizer(tripleTap)
     }
 
-    @IBAction func pressedGame(_ sender: Any)
+    @objc func pressedGame()
     {
         if !UserDefaults.standard.bool(forKey: "didSee")
         {
@@ -38,6 +65,16 @@ class ViewController: UIViewController
         {
             performSegue(withIdentifier: "toGame", sender: self)
         }
+    }
+    
+    @objc func absolutelyNot()
+    {
+        
+    }
+    
+    @objc func probablyNot()
+    {
+        
     }
     
     @objc func changeFont()
