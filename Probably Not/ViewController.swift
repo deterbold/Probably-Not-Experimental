@@ -69,12 +69,12 @@ class ViewController: UIViewController
     
     @objc func absolutelyNot()
     {
-        
+        performSegue(withIdentifier: "toAbsolutely", sender: self)
     }
     
     @objc func probablyNot()
     {
-        
+        performSegue(withIdentifier: "toProbably", sender: self)
     }
     
     @objc func changeFont()

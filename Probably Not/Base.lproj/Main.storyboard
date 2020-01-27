@@ -21,6 +21,8 @@
                     <connections>
                         <segue destination="s8Y-Xp-ogT" kind="show" identifier="toTutorial" id="YsL-c2-P7n"/>
                         <segue destination="Fnl-rV-Qph" kind="show" identifier="toGame" id="FyC-zF-uP1"/>
+                        <segue destination="huD-pX-p4i" kind="show" identifier="toAbsolutely" id="LqK-fu-nxK"/>
+                        <segue destination="chV-et-J4s" kind="show" identifier="toProbably" id="Idk-2J-bo4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -251,7 +253,7 @@ Press NEXT</string>
             <objects>
                 <viewController id="huD-pX-p4i" customClass="AbsolutelyNotController" customModule="Probably_Not" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0s-5T-gYS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TvT-AB-EIc"/>
@@ -267,7 +269,7 @@ Press NEXT</string>
             <objects>
                 <viewController id="chV-et-J4s" customClass="ProbablyNotController" customModule="Probably_Not" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5rF-rK-AGL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fsh-YL-StA"/>
@@ -285,96 +287,7 @@ Press NEXT</string>
                     <view key="view" contentMode="scaleToFill" id="Q6E-r3-WoB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-e0-HQg">
-                                <rect key="frame" x="18" y="120.5" width="339" height="326"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find me something that is not but could be ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP6-zo-Bme">
-                                <rect key="frame" x="18" y="28" width="343" height="22.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThingToFind" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sj-1Y-fpJ">
-                                <rect key="frame" x="142" y="75.5" width="94.5" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="ejw-dQ-uLI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrN-fJ-fCL">
-                                <rect key="frame" x="0.0" y="598" width="375" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7hv-J2-2yd"/>
-                                    <barButtonItem title="LIBRARY" id="L8r-dl-OK1">
-                                        <connections>
-                                            <action selector="openPhotoLibrary:" destination="Fnl-rV-Qph" id="UcG-IN-xeB"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="camera" id="RaM-Sm-oul">
-                                        <connections>
-                                            <action selector="takePicture:" destination="Fnl-rV-Qph" id="hrh-bJ-9Nt"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="RESET" id="7T5-Es-Oor">
-                                        <connections>
-                                            <action selector="restartGame:" destination="Fnl-rV-Qph" id="Q46-8b-Ly9"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kw6-zJ-IW2"/>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answers Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-HK-nz8">
-                                <rect key="frame" x="20" y="473" width="339" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-AB-tgF">
-                                <rect key="frame" x="18" y="501" width="339" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="N2q-Qj-7oI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="3qb-e0-HQg" firstAttribute="centerX" secondItem="Q6E-r3-WoB" secondAttribute="centerX" id="0k1-st-fT6"/>
-                            <constraint firstItem="3qb-e0-HQg" firstAttribute="centerX" secondItem="6Sj-1Y-fpJ" secondAttribute="centerX" constant="-1.75" id="8Ex-z9-GK5"/>
-                            <constraint firstAttribute="bottom" secondItem="qhw-HK-nz8" secondAttribute="bottom" constant="153.5" id="9Po-HG-KEg"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HP6-zo-Bme" secondAttribute="trailing" symbolic="YES" id="EAF-sV-cjq"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="bottom" secondItem="hrN-fJ-fCL" secondAttribute="bottom" constant="5" id="Iw7-5w-QJk"/>
-                            <constraint firstItem="hrN-fJ-fCL" firstAttribute="leading" secondItem="Q6E-r3-WoB" secondAttribute="leading" id="M2t-Zp-6I2"/>
-                            <constraint firstItem="gpd-AB-tgF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qhw-HK-nz8" secondAttribute="leading" constant="-2" id="OAY-9F-F6g"/>
-                            <constraint firstItem="gpd-AB-tgF" firstAttribute="top" secondItem="qhw-HK-nz8" secondAttribute="bottom" constant="7.5" id="T4T-WL-i3K"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="trailing" secondItem="gpd-AB-tgF" secondAttribute="trailing" constant="18" id="Yfi-oc-iz2"/>
-                            <constraint firstItem="qhw-HK-nz8" firstAttribute="leading" secondItem="3qb-e0-HQg" secondAttribute="leading" constant="2" id="aAB-aL-cu5"/>
-                            <constraint firstItem="qhw-HK-nz8" firstAttribute="trailing" secondItem="gpd-AB-tgF" secondAttribute="trailing" constant="2" id="b8E-C5-d61"/>
-                            <constraint firstItem="3qb-e0-HQg" firstAttribute="leading" secondItem="4Y1-2O-Bix" secondAttribute="leading" constant="18" id="cAn-tQ-2hG"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="trailing" secondItem="gpd-AB-tgF" secondAttribute="trailing" constant="18" id="fpM-aV-pOi"/>
-                            <constraint firstItem="6Sj-1Y-fpJ" firstAttribute="top" secondItem="HP6-zo-Bme" secondAttribute="bottom" constant="25" id="h3e-00-Ghi"/>
-                            <constraint firstItem="HP6-zo-Bme" firstAttribute="leading" secondItem="4Y1-2O-Bix" secondAttribute="leading" constant="18" id="ktT-sO-voI"/>
-                            <constraint firstItem="qhw-HK-nz8" firstAttribute="leading" secondItem="4Y1-2O-Bix" secondAttribute="leading" constant="20" id="n0E-ZT-0Ts"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="trailing" secondItem="qhw-HK-nz8" secondAttribute="trailing" constant="16" id="ot8-pa-uMH"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="trailing" secondItem="HP6-zo-Bme" secondAttribute="trailing" constant="14" id="pcS-lS-te5"/>
-                            <constraint firstItem="3qb-e0-HQg" firstAttribute="top" secondItem="6Sj-1Y-fpJ" secondAttribute="bottom" constant="25" id="qIN-Y1-llF"/>
-                            <constraint firstItem="HP6-zo-Bme" firstAttribute="top" secondItem="4Y1-2O-Bix" secondAttribute="top" constant="28" id="rJz-jG-GVW"/>
-                            <constraint firstItem="gpd-AB-tgF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3qb-e0-HQg" secondAttribute="trailing" id="tuS-Kq-Oh1"/>
-                            <constraint firstItem="gpd-AB-tgF" firstAttribute="leading" secondItem="4Y1-2O-Bix" secondAttribute="leading" constant="18" id="ua3-eM-Gvz"/>
-                            <constraint firstItem="qhw-HK-nz8" firstAttribute="leading" secondItem="gpd-AB-tgF" secondAttribute="leading" constant="2" id="ubq-X8-Bvw"/>
-                            <constraint firstItem="HP6-zo-Bme" firstAttribute="leading" secondItem="4Y1-2O-Bix" secondAttribute="leading" constant="18" id="wsl-MD-wmK"/>
-                            <constraint firstItem="4Y1-2O-Bix" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Sj-1Y-fpJ" secondAttribute="trailing" symbolic="YES" id="xcu-x9-jLJ"/>
-                            <constraint firstItem="gpd-AB-tgF" firstAttribute="leading" secondItem="4Y1-2O-Bix" secondAttribute="leading" constant="18" id="ybz-CO-gKK"/>
-                            <constraint firstItem="qhw-HK-nz8" firstAttribute="top" secondItem="3qb-e0-HQg" secondAttribute="bottom" constant="26.5" id="z0v-a9-t8Z"/>
-                            <constraint firstItem="3qb-e0-HQg" firstAttribute="centerX" secondItem="hrN-fJ-fCL" secondAttribute="centerX" id="zjv-dF-8iJ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Y1-2O-Bix"/>
                     </view>
                     <navigationItem key="navigationItem" title="probably not a game" id="Jk7-xg-V6A">
@@ -385,12 +298,6 @@ Press NEXT</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="answerLabel" destination="qhw-HK-nz8" id="nVa-D4-v6O"/>
-                        <outlet property="cameraButton" destination="RaM-Sm-oul" id="sNj-ln-Qeg"/>
-                        <outlet property="outletView" destination="3qb-e0-HQg" id="tFs-cu-DdX"/>
-                        <outlet property="resultsLabel" destination="gpd-AB-tgF" id="sIi-Vj-I0I"/>
-                        <outlet property="thingToFindLabel" destination="6Sj-1Y-fpJ" id="qL5-iV-hTT"/>
-                        <outlet property="toolBar" destination="hrN-fJ-fCL" id="5x3-qu-drz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="pB9-oK-I3n"/>
                     </connections>
                 </viewController>
@@ -423,7 +330,7 @@ Press NEXT</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FyC-zF-uP1"/>
-        <segue reference="YsL-c2-P7n"/>
+        <segue reference="h4n-4w-sUe"/>
         <segue reference="pB9-oK-I3n"/>
     </inferredMetricsTieBreakers>
 </document>
