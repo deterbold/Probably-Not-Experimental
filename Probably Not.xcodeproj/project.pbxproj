@@ -12,6 +12,7 @@
 		4203423023D9DAA50087625D /* UIView_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203422F23D9DAA50087625D /* UIView_Ext.swift */; };
 		4203423223DA50460087625D /* AdjustFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203423123DA50460087625D /* AdjustFont.swift */; };
 		421023B123CF9AE700354129 /* SRCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421023B023CF9AE700354129 /* SRCopyableLabel.swift */; };
+		4287E50A23E0CB0A006D4DDB /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287E50923E0CB0A006D4DDB /* ResizeImage.swift */; };
 		42BE542723DB4E2A00F29B8F /* LabelAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE542623DB4E2A00F29B8F /* LabelAnimation.swift */; };
 		42BE542923DB4FEB00F29B8F /* Hellvetica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42BE542823DB4FEB00F29B8F /* Hellvetica.ttf */; };
 		4918577523853E5400A25C42 /* Tutorial1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918577423853E5400A25C42 /* Tutorial1_ViewController.swift */; };
@@ -37,6 +38,7 @@
 		4203422F23D9DAA50087625D /* UIView_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_Ext.swift; sourceTree = "<group>"; };
 		4203423123DA50460087625D /* AdjustFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustFont.swift; sourceTree = "<group>"; };
 		421023B023CF9AE700354129 /* SRCopyableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRCopyableLabel.swift; sourceTree = "<group>"; };
+		4287E50923E0CB0A006D4DDB /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 		42BE542623DB4E2A00F29B8F /* LabelAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAnimation.swift; sourceTree = "<group>"; };
 		42BE542823DB4FEB00F29B8F /* Hellvetica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hellvetica.ttf; sourceTree = "<group>"; };
 		4918577423853E5400A25C42 /* Tutorial1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1_ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				4203422F23D9DAA50087625D /* UIView_Ext.swift */,
 				4203423123DA50460087625D /* AdjustFont.swift */,
 				42BE542623DB4E2A00F29B8F /* LabelAnimation.swift */,
+				4287E50923E0CB0A006D4DDB /* ResizeImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				4918577923853E6F00A25C42 /* Tutorial3_ViewController.swift in Sources */,
 				495A119E23799D4E00CCB2D3 /* TutorialController.swift in Sources */,
 				499BBB0A237957750017C14A /* AppDelegate.swift in Sources */,
+				4287E50A23E0CB0A006D4DDB /* ResizeImage.swift in Sources */,
 				421023B123CF9AE700354129 /* SRCopyableLabel.swift in Sources */,
 				495A11A02379A81700CCB2D3 /* Resnet50.mlmodel in Sources */,
 				4203423223DA50460087625D /* AdjustFont.swift in Sources */,

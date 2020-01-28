@@ -36,45 +36,7 @@
                     <view key="view" contentMode="scaleToFill" id="IoA-l3-M0Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For example, the game will want you find something THAT IS NOT, but COULD PROBABLY BE, " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg1-tu-vKP">
-                                <rect key="frame" x="43" y="51" width="289" height="142"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaL-yn-HHQ">
-                                <rect key="frame" x="23" y="285" width="351.5" height="155"/>
-                                <string key="text">Think about how the computer sees things. What is something that looks like a desktop computer, but is not a desktop computer? How can you cheat the algorithm to think that something could be a desktop computer?
-
-Let me give you an example. Press NEXT.</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a desktop computer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-3S-yXk">
-                                <rect key="frame" x="110" y="216" width="155" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="vaj-aq-zxW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Loi-3S-yXk" firstAttribute="leading" secondItem="lzD-R6-X9e" secondAttribute="leading" constant="110" id="0Fg-CU-16h"/>
-                            <constraint firstItem="Vg1-tu-vKP" firstAttribute="leading" secondItem="lzD-R6-X9e" secondAttribute="leading" constant="43" id="0il-n3-JLH"/>
-                            <constraint firstItem="CaL-yn-HHQ" firstAttribute="top" secondItem="Loi-3S-yXk" secondAttribute="bottom" constant="48" id="2vy-cZ-2hS"/>
-                            <constraint firstItem="Loi-3S-yXk" firstAttribute="centerX" secondItem="IoA-l3-M0Q" secondAttribute="centerX" id="3ry-FW-4ya"/>
-                            <constraint firstItem="CaL-yn-HHQ" firstAttribute="leading" secondItem="lzD-R6-X9e" secondAttribute="leading" constant="23" id="UGo-fb-00Q"/>
-                            <constraint firstItem="lzD-R6-X9e" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CaL-yn-HHQ" secondAttribute="trailing" symbolic="YES" id="Ulj-ap-kAH"/>
-                            <constraint firstItem="Vg1-tu-vKP" firstAttribute="top" secondItem="lzD-R6-X9e" secondAttribute="top" constant="51" id="kaZ-nR-zDh"/>
-                            <constraint firstItem="Loi-3S-yXk" firstAttribute="top" secondItem="Vg1-tu-vKP" secondAttribute="bottom" constant="23" id="oEd-9w-3xK"/>
-                            <constraint firstItem="Loi-3S-yXk" firstAttribute="top" secondItem="IoA-l3-M0Q" secondAttribute="top" constant="216" id="rMf-UB-4iF"/>
-                            <constraint firstItem="Vg1-tu-vKP" firstAttribute="centerX" secondItem="Loi-3S-yXk" secondAttribute="centerX" id="ytx-N4-ooA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lzD-R6-X9e"/>
                     </view>
                     <navigationItem key="navigationItem" id="cnq-9x-5nQ">
@@ -96,40 +58,7 @@ Let me give you an example. Press NEXT.</string>
                     <view key="view" contentMode="scaleToFill" id="5rh-bh-LpM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The computer sees: monitor, desktop computer, notebook, screen." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgd-nw-5oY">
-                                <rect key="frame" x="56" y="539" width="263" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="0cs-Yh-fa2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNw-JE-Rba">
-                                <rect key="frame" x="0.0" y="15" width="375" height="58.5"/>
-                                <string key="text">This picture fools the algorithm into thinking that what it sees IS NOT, but COULD POSSIBLY BE, a desktop computer. Look at the Results underneath the picture</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="desktop.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="AL7-LB-pqa">
-                                <rect key="frame" x="67" y="81" width="240" height="450"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Vgd-nw-5oY" firstAttribute="leading" secondItem="UHO-hB-0JO" secondAttribute="leading" constant="56" id="24d-kZ-hgr"/>
-                            <constraint firstAttribute="bottom" secondItem="Vgd-nw-5oY" secondAttribute="bottom" constant="20" symbolic="YES" id="3qG-nv-vfS"/>
-                            <constraint firstItem="AL7-LB-pqa" firstAttribute="leading" secondItem="UHO-hB-0JO" secondAttribute="leading" constant="67" id="FkF-w3-TpH"/>
-                            <constraint firstItem="UHO-hB-0JO" firstAttribute="trailing" secondItem="AL7-LB-pqa" secondAttribute="trailing" constant="68" id="IYh-dQ-cS8"/>
-                            <constraint firstItem="DNw-JE-Rba" firstAttribute="top" secondItem="UHO-hB-0JO" secondAttribute="top" constant="15" id="IeT-gP-H58"/>
-                            <constraint firstItem="UHO-hB-0JO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DNw-JE-Rba" secondAttribute="trailing" id="OXj-0k-XcO"/>
-                            <constraint firstItem="AL7-LB-pqa" firstAttribute="top" secondItem="DNw-JE-Rba" secondAttribute="bottom" constant="7.5" id="OuZ-KI-SiA"/>
-                            <constraint firstItem="Vgd-nw-5oY" firstAttribute="centerX" secondItem="5rh-bh-LpM" secondAttribute="centerX" id="k3l-Qq-uZD"/>
-                            <constraint firstItem="DNw-JE-Rba" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UHO-hB-0JO" secondAttribute="leading" id="oB3-an-Ddr"/>
-                            <constraint firstItem="Vgd-nw-5oY" firstAttribute="top" secondItem="AL7-LB-pqa" secondAttribute="bottom" constant="8" id="yge-jF-IGb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UHO-hB-0JO"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8d-HF-YrG">
@@ -151,28 +80,7 @@ Let me give you an example. Press NEXT.</string>
                     <view key="view" contentMode="scaleToFill" id="aLy-Tp-trV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBf-ZU-GFp">
-                                <rect key="frame" x="17" y="92" width="340" height="419"/>
-                                <string key="text">When playing Probably Not (a game), try to think like a computer. What does a computer "see"?
-
-Take A LOT of pictures. Figure out the patterns in what the computer sees. 
-
-The game checks the second most probably answer, that is, what the algorithm considers to be the second most probably thing it is seeing. So learn to dougle-guess the computer.
-
-And like with all AI - be skeptic. This is silly technology, put to a silly use. </string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9XZ-jl-A5j" firstAttribute="bottom" secondItem="LBf-ZU-GFp" secondAttribute="bottom" constant="136" id="MZ0-Av-Pb8"/>
-                            <constraint firstItem="LBf-ZU-GFp" firstAttribute="leading" secondItem="9XZ-jl-A5j" secondAttribute="leading" constant="17" id="S6y-ct-zUl"/>
-                            <constraint firstItem="9XZ-jl-A5j" firstAttribute="trailing" secondItem="LBf-ZU-GFp" secondAttribute="trailing" constant="18" id="ivg-E5-fV8"/>
-                            <constraint firstItem="LBf-ZU-GFp" firstAttribute="top" secondItem="9XZ-jl-A5j" secondAttribute="top" constant="92" id="mvq-hk-rl3"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9XZ-jl-A5j"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cuv-S6-iX9">
@@ -194,43 +102,7 @@ And like with all AI - be skeptic. This is silly technology, put to a silly use.
                     <view key="view" contentMode="scaleToFill" id="daH-NE-l7a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-Pi-T7T">
-                                <rect key="frame" x="0.0" y="94" width="375" height="253.5"/>
-                                <string key="text">This is Probably Not (a game).
-  The computer will ask you to find an object.
- Find something that is not, but could probably be that object.
- For example, if you were to find a "Desktop Computer", this picture would convince the computer that the thing in the picture is not, but could be a "Desktop Computer".
-
-Press NEXT</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLk-cY-50A">
-                                <rect key="frame" x="0.0" y="437.5" width="375" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Iav-PH-xFi"/>
-                                    <barButtonItem title="SKIP TUTORIAL" width="209" id="c4d-Vc-LhX">
-                                        <connections>
-                                            <segue destination="Fnl-rV-Qph" kind="show" id="Ye4-mh-MQN"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cZQ-AU-hdx"/>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </toolbar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="pLk-cY-50A" firstAttribute="top" secondItem="w3D-Pi-T7T" secondAttribute="bottom" constant="90" id="5QK-W6-pf4"/>
-                            <constraint firstItem="pLk-cY-50A" firstAttribute="leading" secondItem="4HE-9q-b3T" secondAttribute="leading" id="Nnk-2i-gHy"/>
-                            <constraint firstItem="w3D-Pi-T7T" firstAttribute="top" secondItem="4HE-9q-b3T" secondAttribute="top" constant="94" id="aJd-nG-1Do"/>
-                            <constraint firstItem="pLk-cY-50A" firstAttribute="centerX" secondItem="w3D-Pi-T7T" secondAttribute="centerX" id="keY-qo-cfr"/>
-                            <constraint firstItem="w3D-Pi-T7T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4HE-9q-b3T" secondAttribute="leading" id="ldE-cK-ecz"/>
-                            <constraint firstItem="4HE-9q-b3T" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w3D-Pi-T7T" secondAttribute="trailing" id="v75-da-m1J"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4HE-9q-b3T"/>
                     </view>
                     <navigationItem key="navigationItem" id="q0w-zR-eED">
@@ -241,7 +113,7 @@ Press NEXT</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tutorialLabel" destination="w3D-Pi-T7T" id="NPK-b4-zN1"/>
+                        <segue destination="Fnl-rV-Qph" kind="show" identifier="toGame" id="brt-AK-u09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1g-er-nJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,11 +197,8 @@ Press NEXT</string>
             <point key="canvasLocation" x="136.80000000000001" y="138.0809595202399"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="desktop.jpeg" width="3024" height="4032"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FyC-zF-uP1"/>
+        <segue reference="brt-AK-u09"/>
         <segue reference="h4n-4w-sUe"/>
         <segue reference="pB9-oK-I3n"/>
     </inferredMetricsTieBreakers>

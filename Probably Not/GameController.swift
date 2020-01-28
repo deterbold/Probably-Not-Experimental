@@ -79,7 +79,7 @@ class GameController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         //MARK: - GAME INTERFACE
         navigationController?.setToolbarHidden(true, animated: true)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         camera = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(takePicture))
         reset = UIBarButtonItem(title: "RESET", style: .plain, target: self, action: #selector(resetGame))
         library = UIBarButtonItem(title: "LIBRARY", style: .plain, target: self, action: #selector(openPhotoLibrary))
