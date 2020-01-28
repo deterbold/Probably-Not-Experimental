@@ -67,13 +67,53 @@ class ProbablyNotController: UIViewController, UINavigationControllerDelegate, U
         answerField.textAlignment = .center
         answerField.isEditable = false
         answerField.adjustsFontForContentSizeCategory = true
-        answerField.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0.6)
         answerField.text = "Take a picture or choose a picture from your library to learn what something is \n PROBABLY NOT"
         answerField.updateTextFont()
+        if self.traitCollection.userInterfaceStyle == .dark
+        {
+            self.view.backgroundColor = .black
+          self.answerField.textColor = .white
+            answerField.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.6)
+        }
+        else if self.traitCollection.userInterfaceStyle == .light
+        {
+            self.view.backgroundColor = .white
+          self.answerField.textColor = .black
+            answerField.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0.6)
+        }
         view.addSubview(answerField)
         answerField.isHidden = false
         
     }
+    
+    //MARK: - INTERFACE CHANGES
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            if self.traitCollection.userInterfaceStyle == .dark
+                  {
+                      self.view.backgroundColor = .black
+                    self.answerField.textColor = .white
+                    answerField.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.6)
+                  }
+                  else if self.traitCollection.userInterfaceStyle == .light
+                  {
+                      self.view.backgroundColor = .white
+                    self.answerField.textColor = .black
+                    answerField.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0.6)
+                  }
+       }
+
+       override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+            if self.traitCollection.userInterfaceStyle == .dark
+            {
+                self.view.backgroundColor = .black
+              self.answerField.textColor = .white
+            }
+            else if self.traitCollection.userInterfaceStyle == .light
+            {
+                self.view.backgroundColor = .white
+              self.answerField.textColor = .black
+            }
+       }
     
     @objc func takePicture()
     {
@@ -125,7 +165,6 @@ class ProbablyNotController: UIViewController, UINavigationControllerDelegate, U
     
     func artificialIntelligence(image: CIImage)
     {
-
         answerField.frame.size.width = self.outletView.frame.width
         answerField.frame.origin.x = self.outletView.frame.origin.x
         answerField.updateTextFont()

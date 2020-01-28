@@ -47,11 +47,49 @@ class ViewController: UIViewController
         presentationLabel.numberOfLines = 0
         presentationLabel.adjustsFontSizeToFitWidth = true
         presentationLabel.adjustsFontForContentSizeCategory = true
+        if self.traitCollection.userInterfaceStyle == .dark
+        {
+            self.view.backgroundColor = .black
+            presentationLabel.textColor = .white
+        }
+        else if self.traitCollection.userInterfaceStyle == .light
+        {
+            self.view.backgroundColor = .white
+            presentationLabel.textColor = .black
+        }
         view.addSubview(presentationLabel)
         
         let tripleTap = UITapGestureRecognizer(target: self, action: #selector(changeFont))
         tripleTap.numberOfTapsRequired = 3
         view.addGestureRecognizer(tripleTap)
+    }
+    
+    //MARK: - UI CHANGES
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+         if self.traitCollection.userInterfaceStyle == .dark
+               {
+                   self.view.backgroundColor = .black
+                   presentationLabel.textColor = .white
+               }
+               else if self.traitCollection.userInterfaceStyle == .light
+               {
+                   self.view.backgroundColor = .white
+                   presentationLabel.textColor = .black
+               }
+    }
+
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+         if self.traitCollection.userInterfaceStyle == .dark
+               {
+                   self.view.backgroundColor = .black
+                   presentationLabel.textColor = .white
+               }
+               else if self.traitCollection.userInterfaceStyle == .light
+               {
+                   self.view.backgroundColor = .white
+                   presentationLabel.textColor = .black
+               }
     }
 
     @objc func pressedGame()
