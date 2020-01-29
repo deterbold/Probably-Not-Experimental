@@ -20,7 +20,19 @@ class ViewController: UIViewController
     var probably: UIBarButtonItem!
    
     
-    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        if self.traitCollection.userInterfaceStyle == .dark
+        {
+            self.view.backgroundColor = .black
+            presentationLabel.textColor = .white
+        }
+        else if self.traitCollection.userInterfaceStyle == .light
+        {
+            self.view.backgroundColor = .white
+            presentationLabel.textColor = .black
+        }
+    }
     
     override func viewDidLoad()
     {
@@ -30,11 +42,12 @@ class ViewController: UIViewController
         self.navigationController?.navigationBar.isHidden = true
         navigationController?.setToolbarHidden(false, animated: true)
         navigationController?.toolbar.barTintColor = .systemBackground
-        absolutely = UIBarButtonItem(title: "ABSOLUTELY NOT", style: .plain, target: self, action: #selector(absolutelyNot))
-        game = UIBarButtonItem(title: "GAME", style: .plain, target: self, action: #selector(pressedGame))
-        probably = UIBarButtonItem(title: "PROBABLY NOT", style: .plain, target: self, action: #selector(probablyNot))
+        absolutely = UIBarButtonItem(title: "Absolutely Not", style: .plain, target: self, action: #selector(absolutelyNot))
+        game = UIBarButtonItem(title: "Game", style: .plain, target: self, action: #selector(pressedGame))
+        probably = UIBarButtonItem(title: "Probably Not", style: .plain, target: self, action: #selector(probablyNot))
+        
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        toolbarItems = [spacer, spacer, absolutely, spacer, spacer, game, spacer, spacer, probably, spacer, spacer]
+        toolbarItems = [spacer, absolutely, spacer, spacer, game, spacer, spacer, probably, spacer]
 
 
         // Do any additional setup after loading the view.

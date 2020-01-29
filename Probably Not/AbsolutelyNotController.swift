@@ -32,6 +32,8 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
     //MARK: - UI VARIABLES
        var camera: UIBarButtonItem!
        var library: UIBarButtonItem!
+        var shareButton: UIBarButtonItem!
+    var spacer: UIBarButtonItem!
        //text view
        var answerField: UITextView!
        //outletView
@@ -49,7 +51,8 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
            navigationController?.toolbar.barTintColor = .systemBackground
            camera = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(takePicture))
            library = UIBarButtonItem(title: "LIBRARY", style: .plain, target: self, action: #selector(openPhotoLibrary))
-           let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+            shareButton = UIBarButtonItem(title: "SHARE", style: .plain, target: self, action: #selector(shareScreenshot))
+            spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
            toolbarItems = [spacer, spacer, spacer, library, spacer, spacer, camera, spacer, spacer, spacer]
            
            //MARK: - OUTLET VIEW INIT
@@ -74,7 +77,7 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
            answerField.textAlignment = .center
            answerField.isEditable = false
            answerField.adjustsFontForContentSizeCategory = true
-           answerField.text = "Take a picture or choose a picture from your library to learn what something is \n PROBABLY NOT"
+           answerField.text = "Take a picture or choose a picture from your library to learn what something is \n ABSOLUTELY NOT"
            answerField.updateTextFont()
         if self.traitCollection.userInterfaceStyle == .dark
         {
@@ -167,6 +170,22 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
            dismiss(animated: true, completion: nil)
        
        }
+    
+    @objc func shareScreenshot()
+    {
+        var screenshot: UIImage?
+        let layer = UIApplication.shared.keyWindow!.layer
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else {return}
+        layer.render(in: context)
+        screenshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let imageShare = [ screenshot! ]
+        let activityViewController = UIActivityViewController(activityItems: imageShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
        
     //MARK: - ARTIFICIAL INTELLIGENCE, BABY!
     
@@ -177,6 +196,7 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
             answerField.frame.origin.x = self.outletView.frame.origin.x
             answerField.updateTextFont()
             answerField.text = "Detecting image ..."
+            toolbarItems = [spacer, library, spacer, shareButton, spacer, spacer, camera, spacer]
 
                // Load the ML model through its generated class
                guard let model = try? VNCoreMLModel(for: Resnet50().model) else {

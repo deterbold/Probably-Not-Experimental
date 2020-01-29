@@ -29,7 +29,7 @@ class Tutorial1_ViewController: UIViewController
         view.addSubview(topLabel)
         
         //MIDDLE LABEL
-        middleLabel = UILabel(frame: CGRect(x: 10, y: view.frame.midY, width: view.frame.width - 30, height: 50))
+        middleLabel = UILabel(frame: CGRect(x: 10, y: view.frame.midY - 100, width: view.frame.width - 30, height: 50))
         middleLabel.font = UIFont(name: "Avenir-BlackOblique", size: 20)
         middleLabel.text = "a desktop computer"
         middleLabel.numberOfLines = 0

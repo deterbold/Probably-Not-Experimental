@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>The app needs to use the camera so it can take pictures and analyze them using Artificial Intelligence</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>The app needs access to the Photo Library if you want to save screenshots</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The app needs to have access to your Camera Roll so you can load pictures from your phone and analyze them using Artificial Intelligence.</string>
 	<key>UIAppFonts</key>
