@@ -57,7 +57,7 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
            
            //MARK: - OUTLET VIEW INIT
            outletView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.8))
-           outletView.contentMode = .scaleAspectFill
+        outletView.contentMode = .scaleAspectFill
            view.addSubview(outletView)
         
 
@@ -173,6 +173,8 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
     
     @objc func shareScreenshot()
     {
+        navigationController?.setToolbarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         var screenshot: UIImage?
         let layer = UIApplication.shared.keyWindow!.layer
         let scale = UIScreen.main.scale
@@ -185,6 +187,11 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
         let activityViewController = UIActivityViewController(activityItems: imageShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+            print("activity: \(String(describing: activity)), success: \(success), items: \(String(describing: items)), error: \(String(describing: error))")
+            self.navigationController?.setToolbarHidden(false, animated: true)
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
        
     //MARK: - ARTIFICIAL INTELLIGENCE, BABY!

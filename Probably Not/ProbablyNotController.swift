@@ -170,6 +170,8 @@ class ProbablyNotController: UIViewController, UINavigationControllerDelegate, U
     
     @objc func shareScreenshot()
     {
+        navigationController?.setToolbarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         var screenshot: UIImage?
         let layer = UIApplication.shared.keyWindow!.layer
         let scale = UIScreen.main.scale
@@ -182,6 +184,11 @@ class ProbablyNotController: UIViewController, UINavigationControllerDelegate, U
         let activityViewController = UIActivityViewController(activityItems: imageShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+            print("activity: \(String(describing: activity)), success: \(success), items: \(String(describing: items)), error: \(String(describing: error))")
+            self.navigationController?.setToolbarHidden(false, animated: true)
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
     
      //MARK: - ARTIFICIAL INTELLIGENCE, BABY!
