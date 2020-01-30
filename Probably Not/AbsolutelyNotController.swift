@@ -173,18 +173,25 @@ class AbsolutelyNotController: UIViewController, UINavigationControllerDelegate,
     
     @objc func shareScreenshot()
     {
-        var screenshot: UIImage?
-        let layer = UIApplication.shared.keyWindow!.layer
-        let scale = UIScreen.main.scale
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
-        guard let context = UIGraphicsGetCurrentContext() else {return}
-        layer.render(in: context)
-        screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        let imageShare = [ screenshot! ]
-        let activityViewController = UIActivityViewController(activityItems: imageShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        self.present(activityViewController, animated: true, completion: nil)
+    navigationController?.setToolbarHidden(true, animated: true)
+           navigationController?.setNavigationBarHidden(true, animated: true)
+           var screenshot: UIImage?
+           let layer = UIApplication.shared.keyWindow!.layer
+           let scale = UIScreen.main.scale
+           UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
+           guard let context = UIGraphicsGetCurrentContext() else {return}
+           layer.render(in: context)
+           screenshot = UIGraphicsGetImageFromCurrentImageContext()
+           UIGraphicsEndImageContext()
+           let imageShare = [ screenshot! ]
+           let activityViewController = UIActivityViewController(activityItems: imageShare, applicationActivities: nil)
+           activityViewController.popoverPresentationController?.sourceView = self.view
+           self.present(activityViewController, animated: true, completion: nil)
+           activityViewController.completionWithItemsHandler = { activity, success, items, error in
+               print("activity: \(String(describing: activity)), success: \(success), items: \(String(describing: items)), error: \(String(describing: error))")
+               self.navigationController?.setToolbarHidden(false, animated: true)
+               self.navigationController?.setNavigationBarHidden(false, animated: true)
+           }
     }
        
     //MARK: - ARTIFICIAL INTELLIGENCE, BABY!
